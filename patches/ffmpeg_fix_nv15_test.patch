@@ -1,0 +1,53 @@
+diff --git a/tests/ref/fate/imgutils b/tests/ref/fate/imgutils
+index e79ec7e4b3..fe0fab7267 100644
+--- a/tests/ref/fate/imgutils
++++ b/tests/ref/fate/imgutils
+@@ -262,3 +262,4 @@ rgbf32be        planes: 1, linesizes: 768   0   0   0, plane_sizes: 36864     0
+ rgbf32le        planes: 1, linesizes: 768   0   0   0, plane_sizes: 36864     0     0     0, plane_offsets:     0     0     0, total_size: 36864
+ rgbaf32be       planes: 1, linesizes: 1024   0   0   0, plane_sizes: 49152     0     0     0, plane_offsets:     0     0     0, total_size: 49152
+ rgbaf32le       planes: 1, linesizes: 1024   0   0   0, plane_sizes: 49152     0     0     0, plane_offsets:     0     0     0, total_size: 49152
++nv15            planes: 2, linesizes:  80  80   0   0, plane_sizes:  3840  1920     0     0, plane_offsets:  3840     0     0, total_size: 5760
+diff --git a/tests/ref/fate/sws-pixdesc-query b/tests/ref/fate/sws-pixdesc-query
+index 14156a383c..8584f45450 100644
+--- a/tests/ref/fate/sws-pixdesc-query
++++ b/tests/ref/fate/sws-pixdesc-query
+@@ -59,6 +59,7 @@ isNBPS:
+   gray14le
+   gray9be
+   gray9le
++  nv15
+   nv20be
+   nv20le
+   p010be
+@@ -212,6 +213,7 @@ isYUV:
+   ayuv64be
+   ayuv64le
+   nv12
++  nv15
+   nv16
+   nv20be
+   nv20le
+@@ -324,6 +326,7 @@ isYUV:
+
+ isPlanarYUV:
+   nv12
++  nv15
+   nv16
+   nv20be
+   nv20le
+@@ -417,6 +420,7 @@ isPlanarYUV:
+
+ isSemiPlanarYUV:
+   nv12
++  nv15
+   nv16
+   nv20be
+   nv20le
+@@ -839,6 +843,7 @@ Planar:
+   gbrpf32be
+   gbrpf32le
+   nv12
++  nv15
+   nv16
+   nv20be
+   nv20le
