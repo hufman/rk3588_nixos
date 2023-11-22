@@ -4,5 +4,6 @@
 {
   nixpkgs.overlays = [
     (import ./../overlays/libv4l.nix)
+    (import ./../overlays/libva-utils.nix)
   ];
 }
