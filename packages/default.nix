@@ -2,4 +2,5 @@
 { pkgs ? import <nixpkgs> {} }:
 #pkgs.callPackage ./librga.nix {}
 #pkgs.callPackage ./libv4l-rkmpp.nix {}
-pkgs.callPackage ./mesa-panfork.nix {}
+#pkgs.callPackage ./mesa-panfork.nix {}
+pkgs.callPackage ./gst-rockchip.nix {}

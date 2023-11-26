@@ -4,12 +4,11 @@ pkgs.mkShell {
   name = "test";
   nativeBuildInputs = [
     pkgs.pkgconfig
-    (pkgs.callPackage ./librga.nix {})
   ];
   buildInputs = with pkgs; [
-
-    (pkgs.callPackage ./rockchip_mpp_101.nix {})
-    (pkgs.callPackage ./librga.nix {})
+    gdb
+    gst_all_1.gstreamer
+    (pkgs.callPackage ./gst-rockchip.nix {})
   ];
 }
 #pkgs.callPackage ./libv4l-rkmpp.nix {}
