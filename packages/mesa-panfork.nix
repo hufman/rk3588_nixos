@@ -1,10 +1,14 @@
 # https://github.com/aciceri/rock5b-nixos/blob/master/packages/panfork/default.nix
 {
-  mesa,
   fetchgit,
   ...
 }:
-(mesa.override {
+let
+  pkgs_2305 = import <nixos-23.05> {
+    #config = config.nixpkgs.config;
+  };
+in
+(pkgs_2305.mesa.override {
   enableOSMesa = false;
   vulkanDrivers = [];
   vulkanLayers = [];
