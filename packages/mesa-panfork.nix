@@ -4,9 +4,7 @@
   ...
 }:
 let
-  pkgs_2305 = import <nixos-23.05> {
-    #config = config.nixpkgs.config;
-  };
+  pkgs_2305 = import (fetchTarball https://github.com/NixOS/nixpkgs/archive/release-23.05.tar.gz){};
 in
 (pkgs_2305.mesa.override {
   enableOSMesa = false;
