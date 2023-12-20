@@ -8,7 +8,7 @@ stdenv.mkDerivation {
     owner = "rockchip-linux";
     repo = "mpp";
     rev = "1.0.2";
-    # sha256 = "0hdkk3p2fn03phhc5980sl0fg771fs2sk49wgasj4i0ax8hidg80";
+    sha256 = "kvAgJ5dohc9V7XwtoOEgXpspsb2Tn6JSQIu6B1EPFSs=";
   };
 
   postPatch = ''
