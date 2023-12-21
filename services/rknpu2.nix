@@ -16,7 +16,7 @@ in {
     systemd.services.rknpu2 = {
       description = "Rockchip rknpu2 TPU service";
       wantedBy = [ "multi-user.target" ];
-      serviceConfig.ExecStart = "${pkgs.rockchip-rknpu2}/bin/rknn_server";
+      serviceConfig.ExecStart = "${pkgs.rknpu2}/bin/rknn_server";
     };
   };
 }

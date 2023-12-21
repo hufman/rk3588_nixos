@@ -1,7 +1,7 @@
 { stdenv, lib, fetchgit, autoPatchelfHook }:
 
 stdenv.mkDerivation rec {
-  name = "rknpu2";
+  name = "librknn-api";
   version = "1.6.0";
 
   src = fetchgit {
@@ -16,11 +16,9 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ autoPatchelfHook ];
   buildInputs = [ stdenv.cc.cc ];
 
-
   installPhase = ''
-    runHook preInstall
-    install -m 755 -D -t $out/bin $src/rknpu2/runtime/Linux/rknn_server/aarch64/usr/bin/rknn_server
-    runHook postInstall
+    install -m 555 -D -t $out/lib $src/rknpu2/runtime/Linux/librknn_api/aarch64/librknnrt.so
+    install -m 444 -D -t $out/include $src/rknpu2/runtime/Linux/librknn_api/include/*
   '';
 
   outputs = [ "out" ];
